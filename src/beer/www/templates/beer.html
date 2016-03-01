@@ -1,5 +1,17 @@
 <ion-view view-title="Beer">
   <ion-content>
     <h1>Beer</h1>
+    <div class="list card">
+    	<div class="item item-avatar">
+    		<img src={{beer.labels.icon}}>
+    		<strong>{{beer.name}}</strong>
+    		{{beer.abv}}%ABV
+    	</div>
+
+    	<div class="item item-image">
+    		<img src={{beer.labels.large}}>
+    	</div>
+
+    	
   </ion-content>
 </ion-view>
