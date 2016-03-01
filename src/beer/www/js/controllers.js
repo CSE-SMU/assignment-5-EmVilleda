@@ -11,6 +11,16 @@ angular.module('starter.controllers', [])
 .controller('SearchCtrl', function($scope, $state, $http, BeerData) {
   $scope.form = {};
 
+  if($scope.form.name) {
+    data.name = $scope.form.name;
+  }
+  if($scope.form.abv) {
+    data.abv = $scope.form.abv;
+  }
+  if($scope.form.name) {
+    data.name = $scope.form.name;
+  }
+
   $scope.search = function() {
     $http({
       method: 'GET'.
