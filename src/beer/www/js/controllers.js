@@ -25,19 +25,14 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('BeersCtrl', function($scope, BeerData) {
-  console.log(BeerData.data);
+.controller('BeersCtrl', function($scope, $state, BeerData) {
+  $scope.beers = {};
+  $scope.beers.data = BeerData.data;
 
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+  console.log(BeerData.data);
 })
 
 .controller('BeerCtrl', function($scope, $stateParams, BeerData) {
-  console.log($stateParams.id);
+  console.log($stateParams.beerId);
+  $scope.beer = BeerData.data[($stateParams.beerId)];
 });
