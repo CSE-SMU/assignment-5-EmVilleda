@@ -1,22 +1,42 @@
 <ion-view view-title="Search">
   <ion-content>
     <div class="list">
-	  <label class="item item-input">
-	    <span class="input-label">Beer Name</span>
-	    <input type="text" placeholder="Search" ng-model="form.name">
-	  </label>
-	</div>
+  	  <label class="item item-input">
+  	    <span class="input-label">Beer Name</span>
+  	    <input type="text" placeholder="EX: Stout, Lager, Saison" ng-model="search.beername">
+  	  </label>
 
-  <label class="item item-input">
-    <span class="input-label">Year</span>
-    <input type="tel" placeholder="2016" ng-model="form.year">
-  </label>
+      <label class="item item-input">
+        <span class="input-label">Year</span>
+        <input type="tel" placeholder="ex. 2015" ng-model="search.year">
+      </label>
 
-  <label class="item item-input">
-    <span class="input-label">% ABV</span>
-    <input type="tel" placeholder="16%" ng-model="form.abv">
-  </label>
+      <label class="item item-input">
+        <span class="input-label">ABV %</span>
+        <a class="icon placeholder-icon" ng-click="search.abvGreater = !search.abvGreater">
+              {{search.abvGreater ? ">=" : "<="}}
+            </a>
+            <input type="tel" placeholder="EX: 14%" ng-model="search.abv">
+      </label>
 
-  <button class="button button-positive button-block" ng-click="search()">Submit</button>
+      <label class="item item-input">
+        <span class="input-label">IBU</span>
+            <a class="icon placeholder-icon" ng-click="search.ibuGreater = !search.ibuGreater">
+              {{search.ibuGreater ? ">=" : "<="}}
+            </a>
+            <input type="tel" placeholder="EX: 20" ng-model="ibu">
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+              Organic?
+            </div>
+            <select ng-model="organic.index"
+                ng-options="organicChoices.indexOf(item) as item for item in organicChoices">
+            </select>
+      </label>
+    </div>
+
+    <button class="button button-positive button-block" ng-click="search()">Submit</button>
   </ion-content>
 </ion-view>

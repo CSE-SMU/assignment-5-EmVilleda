@@ -75,6 +75,9 @@ angular.module('starter.controllers', [])
     if( $scope.search.beername ) {
       data.name = $scope.search.beername;
     }
+    if( $scope.search.year ) {
+      data.year = $scope.search.year;
+    }
     if( $scope.search.abv ) {
       var direction = "+";
       if( !$scope.search.abvGreater ) {
@@ -96,9 +99,6 @@ angular.module('starter.controllers', [])
       else {
         data.isOrganic = "N";
       }
-    }
-    if( $scope.search.year ) {
-      data.year = $scope.search.year;
     }
 
     $http({
