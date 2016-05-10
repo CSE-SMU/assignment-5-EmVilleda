@@ -117,9 +117,19 @@ angular.module('starter.controllers', [])
   $scope.beers.data = BeerData.data;
 
   console.log(BeerData.data);
+
+  $scope.srmColor = function(srmVal) {
+    return {'background-color': BeerData.colors[(srmVal)]};
+  }
 })
 
 .controller('BeerCtrl', function($scope, $stateParams, BeerData) {
   console.log($stateParams.beerId);
   $scope.beer = BeerData.data[($stateParams.beerId)];
+
+  $scope.srmColor = function(srmVal) {
+    return {'background': BeerData.colors[(srmVal)]};
+  }
+
+  console.log($scope.beer);
 });
