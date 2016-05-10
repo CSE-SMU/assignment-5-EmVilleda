@@ -1,17 +1,45 @@
 <ion-view view-title="Beer">
-  <ion-content>
+  <ion-content ng-style="srmColor(beer.style.srmMin)">
     <h1>Beer</h1>
     <div class="list card">
     	<div class="item item-avatar">
     		<img src={{beer.labels.icon}}>
-    		<strong>{{beer.name}}</strong>
-    		{{beer.abv}}%ABV
+    		<h2>{{beer.name}}</h2>
+    		<p> {{beer.year}} <br/>
+                {{beer.abv}}% ABV
+            </p>
     	</div>
 
     	<div class="item item-image">
     		<img src={{beer.labels.large}}>
     	</div>
 
-    	
+        <a class="item item-icon-left">
+            <i class="icon ion-beer"></i>
+            <div><b>ABV:</b> {{beer.abv}}% </div>
+        </a>
+
+        <a class="item item-icon-left">
+            <i class="icon ion-ios-pint"></i>
+            <div><b>IBU:</b> {{beer.ibu}}</div>
+        </a>
+
+        <a class="item item-icon-left item-text-wrap">
+            <i class="icon ion-document-text"></i>
+            <div><b>Description:</b> </div>
+            <p>{{beer.description}}</p>
+        </a>
+
+        <a class="item item-icon-left">
+            <i class="icon ion-fireball"></i>
+            <div><b>Style:</b> {{beer.style.name}}</div>
+            <p>{{beer.style.category.name}}</p>
+        </a>
+
+        <a class="item item-icon-left">
+            <i class="icon ion-leaf"></i>
+            <div><b>Organic:</b> {{beer.isOrganic}}</div>
+        </a>
+    </div>  	
   </ion-content>
 </ion-view>
