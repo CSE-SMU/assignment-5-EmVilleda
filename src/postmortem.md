@@ -5,7 +5,7 @@ Emely Villeda-Principe
 
 
 ## How difficult was this assignment?
-Very difficult
+Still pretty difficult
 
 
 ## Did you learn anything new from this assignment?
@@ -17,4 +17,4 @@ The whole point of the assignment was to make us figure this out through our own
 
 
 ## Any other comments?
-Will do better.
+I don't like Ionic very much.
