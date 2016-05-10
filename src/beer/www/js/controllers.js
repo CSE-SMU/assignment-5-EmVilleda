@@ -103,7 +103,7 @@ angular.module('starter.controllers', [])
 
     $http({
       method: 'GET'.
-      url: 'https://salty-taiga-88146.herokuapp.com/beers',
+      url: 'https://salty-taiga-88147.herokuapp.com/beers',
       params: data
     }).then(function successCallback(response) {
       BeerData.data = response.data;
